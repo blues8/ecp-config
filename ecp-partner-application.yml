@@ -1,0 +1,42 @@
+logging:
+    level:
+       root: DEBUG    
+    
+# SPRING PROFILES  
+spring:         
+
+    http:  
+        encoding.charset: UTF-8  
+        encoding.enable: true  
+        encoding.force: true  
+    
+    # DATASOURCE  
+#    datasource:  
+#        driverClass: com.mysql.jdbc.Driver  
+#        url: jdbc:mysql://127.0.0.1:3306/mail?useUnicode=true&characterEncoding=utf-8&useSSL=true  
+#        username: root  
+#        password: 1234  
+        
+    messages: 
+        basename: i18n/ecp
+
+    datasource:  
+        driverClass: com.mysql.jdbc.Driver  
+        url: jdbc:mysql://127.0.0.1:3306/ecp?useUnicode=true&characterEncoding=utf-8&useSSL=true  
+        username: root  
+        password: blues123
+
+
+
+     
+        
+ecp:
+  file:
+    dir: d:/test/
+    size: 12
+        
+courierPswd: 00000000
+    
+     
+    
+  

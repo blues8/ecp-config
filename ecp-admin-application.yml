@@ -1,0 +1,54 @@
+# SPRING PROFILES  
+spring:         
+
+    http:  
+        encoding.charset: UTF-8  
+        encoding.enable: true  
+        
+        
+        encoding.force: true  
+#    mvc:
+#       static-path-pattern: /** # Path pattern used for static resources.
+    
+  #i18n configuation
+    messages:
+         basename: i18n/messages,i18n/systemmanager/param,i18n/systemmanager/sys_common,i18n/systemmanager/sys_dic,i18n/systemmanager/sys_log,i18n/systemmanager/sys_organize,i18n/systemmanager/sys_permission,i18n/systemmanager/sys_resourceManage,i18n/systemmanager/sys_suggestion,i18n/systemmanager/sys_user_setting,i18n/systemmanager/block,i18n/systemmanager/group,i18n/systemmanager/login,i18n/systemmanager/main,i18n/systemmanager/param,i18n/systemmanager/region,i18n/systemmanager/message,i18n/asset/type/asset_application,i18n/asset/type/asset_parts,i18n/asset/type/asset_system,i18n/sys_company,i18n/asset/asset/asset,i18n/asset/asset_type/asset_model,i18n/asset/asset_type/asset_model_parts,i18n/asset/asset_type/asset_model_soft,i18n/asset/asset_type/asset_model_system,i18n/asset/asset_type/asset_type,i18n/asset/asset_type/typeBasis,i18n/asset/asset_type/typeInterchanger,i18n/asset/asset_type/typeLogisticsArk,i18n/asset/asset_type/typeServer,i18n/asset/spare/spare,i18n/monitor/duty,i18n/monitor/alarmevent,i18n/monitor/alarmUpgrade,i18n/monitor/breakdown,i18n/monitor/deviceMonitor,i18n/monitor/logUploadManager,i18n/monitor/monitor,i18n/monitor/requestModeConfiguration,i18n/ecp/ecp
+ # 禁用retry
+    cloud:
+      loadbalancer:
+        retry:
+          enabled: false
+        
+        
+  # VELOCITY TEMPLATES (VelocityAutoConfiguration)
+    velocity:
+       properties:
+            input:
+                encoding: UTF-8
+            output:
+                encoding: UTF-8
+       resource-loader-path: classpath:/templates
+       suffix: .vm
+       toolbox-config-location: /WEB-INF/toolbox.xml
+   
+        
+securite:
+  basic:
+    enabled: false
+    
+#Hystrix支持，如果为true，hystrix库必须在classpath中
+feign:
+  hystrix:
+    enabled: false
+
+
+
+#请求和响应GZIP压缩支持
+    compression:
+      request:
+        enabled: true
+        mime-types: text/xml,application/xml,application/json
+        min-request-size: 2048
+      response:
+        enabled: true
+        
